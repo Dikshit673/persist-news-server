@@ -2,6 +2,7 @@
 
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 6000;
@@ -15,6 +16,10 @@ const apiCallingFn = async (res, parameter) => {
     }
 }
 
+// Cors middleware
+app.use(cors());
+
+// express json middleware
 app.use(express.json())
 
 app.get('/', (req, res, next) => {
