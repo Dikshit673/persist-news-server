@@ -15,6 +15,8 @@ const apiCallingFn = async (res, parameter) => {
     }
 }
 
+app.use(express.json())
+
 app.get('/', (req, res, next) => {
     res.json({ message: "hello from Express App" })
     next();
