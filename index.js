@@ -19,13 +19,13 @@ const apiCallingFn = async (res, parameter) => {
 };
 
 // Cors middleware
-// app.use(cors());
-const corsOptions = {
-  origin: toString(process.env.FRONTEND_NEWS_WEBSITE), // Replace with your Vite website URL
-  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
-};
+app.use(cors());
+// const corsOptions = {
+//   origin: toString(process.env.FRONTEND_NEWS_WEBSITE), // Replace with your Vite website URL
+//   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // express json middleware
 app.use(express.json());
