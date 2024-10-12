@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 
 const express = require("express");
 const axios = require("axios");
@@ -35,7 +35,7 @@ app.get("/", (req, res, next) => {
   next();
 });
 app.get("/news", (req, res) => {
-  console.log(req);
+  //   console.log(req);
   const { page = 1, pageSize = 10, q = "", category = "general" } = req.query;
   console.log(req.query);
   if (q) {
